@@ -14,7 +14,12 @@ const jsonFile = require('jsonfile')
 const INDEX_META_PATH = process.env.INDEX_META_PATH ? path.join('tmp', process.env.INDEX_META_PATH) : path.join('tmp', '.lastIndex.json')
 
 let kue = require('kue');
-let queue = kue.createQueue(Object.assign(config.kue, { redis: config.redis }));
+let queue = kue.createQueue(Object.assign(config.kue, { redis: {
+      host: "ec2-54-146-26-239.compute-1.amazonaws.com",
+      port: "23269",
+      auth: "p02f2beae2ea52cd084b071357d628bb603398a9ae796fc59f2178b920feea588",
+      db: 0
+} }));
 
 const _handleBoolParam = (value) => {
   return JSON.parse(value) // simple way to handle all the '0', '1', 'true', true, false ...
