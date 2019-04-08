@@ -24,11 +24,11 @@ module.exports = {
   },
 
   magento: {
-    url: process.env.MAGENTO_URL || 'http://magento2.demo-1.divante.pl/rest/',
-    consumerKey: process.env.MAGENTO_CONSUMER_KEY || 'alva6h6hku9qxrpfe02c2jalopx7od1q',
-    consumerSecret: process.env.MAGENTO_CONSUMER_SECRET || '9tgfpgoojlx9tfy21b8kw7ssfu2aynpm',
-    accessToken: process.env.MAGENTO_ACCESS_TOKEN || 'rw5w0si9imbu45h3m9hkyrfr4gjina8q',
-    accessTokenSecret: process.env.MAGENTO_ACCESS_TOKEN_SECRET || '00y9dl4vpxgcef3gn5mntbxtylowjcc9',
+    url: process.env.MAGENTO_URL || 'http://smokin.info/rest/',
+    consumerKey: process.env.MAGENTO_CONSUMER_KEY || 'wahzebppzs79ynwnxjm0iijxmowxff1a',
+    consumerSecret: process.env.MAGENTO_CONSUMER_SECRET || '9afup3159cnonj1sw3jvtmm476zrrups',
+    accessToken: process.env.MAGENTO_ACCESS_TOKEN || 'h8uj4j4ovgmtw5042gli1bjw4ckwbquk',
+    accessTokenSecret: process.env.MAGENTO_ACCESS_TOKEN_SECRET || 'p70ssmxqawkjqta5vu7ynv57tkvlma6h',
     storeId: process.env.MAGENTO_STORE_ID || 1,
     currencyCode: process.env.MAGENTO_CURRENCY_CODE || 'USD'
   },
@@ -49,7 +49,7 @@ module.exports = {
 
   db: {
     driver: 'elasticsearch',
-    url: process.env.DATABASE_URL || 'http://localhost:9200',
+    url: process.env.DATABASE_URL || 'https://a395b5f74f054ea68c2d8a5dab00d72d.us-east-1.aws.found.io:9243',
     indexName: process.env.INDEX_NAME || 'vue_storefront_catalog'
   },
 
@@ -58,8 +58,10 @@ module.exports = {
   },
 
   redis: {
-    host: process.env.REDIS_HOST || '127.0.0.1',
-    port: process.env.REDIS_PORT || 6379
+    host: process.env.REDIS_HOST || 'ec2-54-146-26-239.compute-1.amazonaws.com',
+    password: process.env.REDIS_HOST || 'p02f2beae2ea52cd084b071357d628bb603398a9ae796fc59f2178b920feea588',
+    port: process.env.REDIS_PORT || 23269,
+    db: process.env.REDIS_DB || 0
   },
 
   passport: {
